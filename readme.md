@@ -7,6 +7,14 @@ Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protoc
 `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';`
 `flush privileges;`
 
+creating table in mysql:
+
+	create table if not exists loginuser {
+	user_id int not null primary key auto_increment,
+	user_name varchar(255),
+	user_pass varchar(255)
+	}
+
 # To Do List
 - [ ] frontend
 	 - [ ] index.pug (include movie list, wishlist button, add to wishlist button, log out button)
