@@ -2,6 +2,18 @@
 	$ cd backendGDSC
 	$ node app.js
 	http://localhost:8081/
+	
+Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+`ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';`
+`flush privileges;`
+
+creating table in mysql:
+
+	create table if not exists tes (
+		user_id int not null primary key auto_increment,
+    		user_name varchar(255),
+    		user_pass varchar(255)
+	)
 
 # To Do List
 - [ ] frontend
