@@ -12,7 +12,7 @@ app.set('view engine', 'pug')
 const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "password",
+    password: "4141234",
     database: "nodejs"
 });
 
@@ -23,18 +23,22 @@ connection.connect(function(error){
 
 app.get("/", function(req, res){
     if (logged === false){
-        if (isWrongPass === false) {
-            res.sendFile(__dirname + "/login.html");
-        } else {
-            res.sendFile(__dirname + "/login2.html");
-        }
+        res.redirect("/login")
     } else {
         res.render('index', { message: `You are logged in as ${user}` })
     } 
     
 })
 
-app.post("/", encoder, function(req, res){
+app.get("/login", function (req, res){
+        if (isWrongPass === false) {
+            res.sendFile(__dirname + "/login.html");
+        } else {
+            res.sendFile(__dirname + "/login2.html");
+        }
+})
+
+app.post("/login", encoder, function(req, res){
     var username = req.body.username;
     var password = req.body.password;
 
@@ -61,6 +65,7 @@ app.get("/register", function (req,res){
 app.post("/register", encoder, function(req, res){
     var username = req.body.username;
     var password = req.body.password;
+    isWrongPass = false;
 
     connection.query(`insert into loginuser (user_name, user_pass) values ('${username}','${password}')`, function(error, results, field){
         if (results.length > 0) {
@@ -76,7 +81,7 @@ app.post("/register", encoder, function(req, res){
 
 app.get("/logout", function (req, res){
     logged = false
-    res.redirect("/")
+    res.redirect("/login")
 })
 
 app.get("/wishlist", function (req,res){
