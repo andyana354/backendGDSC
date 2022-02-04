@@ -1,0 +1,136 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='Website.css')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css')
+  style 
+    include ./index.css
+  title Movie Room!
+.navbar
+  .navbar-container
+    .logo-container
+      h1.logo Movieflix
+    .menu-container
+      ul.menu-list
+        a(href='wishlist' style='text-decoration: none; color:white')
+          li.menu-list-item Wishlist
+        a(href='logout' style='text-decoration: none; color:white')
+          li.menu-list-item Logout
+    .profile-container
+      img.profile-picture(src='Profile.jpg' alt='')
+      .profile-text-container
+        span.profile-text 
+          = message
+.container
+  .content-container
+    .featured-content(style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('Money\ Heist.jpg');")
+      img.featured-title(src='Money Heist Logo.png' alt='Logo')
+      p.featured-desc
+        | Money Heist is a Spanish heist crime drama television series created by &Aacute;lex Pina. The series traces two long-prepared heists led by the Professor (&Aacute;lvaro Morte), one on the Royal Mint of Spain, and one on the Bank of Spain, told from the perspective of one of the robbers, Tokyo (&Uacute;rsula Corber&oacute;). The narrative is told in a real-time-like fashion and relies on flashbacks, time-jumps, hidden character motivations, and an unreliable narrator for complexity.
+      a(href='https://www.youtube.com/watch?v=htqXL94Rza4' target='_blank')
+        button.featured-button Play
+
+    .movie-list-container
+      h1.movie-list-title UPCOMING
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            a(href='' target='_blank')
+              img.movie-list-item-img(src='Red Notice.jpg' alt='')
+            p.movie-list-item-title Red Notice
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='' target='_blank')
+              img.movie-list-item-img(src='Finch.jpg' alt='')
+            p.movie-list-item-title Finch
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='' target='_blank')
+              img.movie-list-item-img(src='Nightmare Alley.jpg' alt='')
+            p.movie-list-item-title Nightmare Alley
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+    .movie-list-container-2
+      h1.movie-list-title TRENDING
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            a(href='' target='_blank')
+              img.movie-list-item-img(src='Black Widow.jpg' alt='')
+            p.movie-list-item-title Black Widow
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='' target='_blank')
+              img.movie-list-item-img(src='The Tomorrow War.png' alt='')
+            p.movie-list-item-title The Tomorrow War
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='' target='_blank')
+              img.movie-list-item-img(src='Godzilla.jpg' alt='')
+            p.movie-list-item-title Godzilla vs Kong Kong
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+.container
+  .content-container
+    .featured-content-2(style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('Background.jpg');")
+        img.featured-title-2(src='Spirited Away.png' alt='Logo')
+        p.featured-desc-2
+          | In this animated feature by noted Japanese director Hayao Miyazaki, 10-year-old Chihiro (Rumi Hiiragi) and her parents (Takashi Nait&ocirc;, Yasuko Sawaguchi) stumble upon a seemingly abandoned amusement park. After her mother and father are turned into giant pigs, Chihiro meets the mysterious Haku (Miyu Irino), who explains that the park is a resort for supernatural beings who need a break from their time spent in the earthly realm, and that she must work there to free herself and her parents.
+        a(href='https://youtube.com/watch?v=ByXuk9QqQkk' target='_blank')
+          button.featured-button-2 Play
+    .movie-list-container-2
+      h1.movie-list-title DRAMA
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            a(href='' target='_blank')
+              img.movie-list-item-img(src='Vincenzo.png' alt='')
+            p.movie-list-item-title Vincenzo
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='' target='_blank')
+              img.movie-list-item-img(src='Squid Game.jpeg' alt='')
+            p.movie-list-item-title Squid Game
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='' target='_blank')
+              img.movie-list-item-img(src='Youth of May.jpg' alt='')
+            p.movie-list-item-title Youth of May
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+      script(src='app.js')
