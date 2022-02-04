@@ -1,7 +1,247 @@
-html
-  head
-    title LOGIN
-  body
-    h1= message
-    a(class='button' href='/logout') log out
-    a(class='button' href='/wishlist') wishlist
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='Website.css')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css')
+  style 
+    include ./index.css
+  title Movieflix
+.navbar
+  .navbar-container
+    .logo-container
+      h1.logo Movieflix
+    .menu-container
+      ul.menu-list
+        a(href='wishlist' style='text-decoration: none; color:white')
+          li.menu-list-item Wishlist
+        a(href='logout' style='text-decoration: none; color:white')
+          li.menu-list-item Logout
+    .profile-container
+      .profile-text-container
+        span.profile-text
+          = message
+.container
+  .content-container
+    .featured-content(style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('Money\ Heist.jpg');")
+      img.featured-title(src='Money Heist Logo.png' alt='Logo')
+      p.featured-desc
+        | Money Heist is a Spanish heist crime drama television series created by &Aacute;lex Pina. The series traces two long-prepared heists led by the Professor (&Aacute;lvaro Morte), one on the Royal Mint of Spain, and one on the Bank of Spain, told from the perspective of one of the robbers, Tokyo (&Uacute;rsula Corber&oacute;). The narrative is told in a real-time-like fashion and relies on flashbacks, time-jumps, hidden character motivations, and an unreliable narrator for complexity.
+      a(href='https://www.youtube.com/watch?v=htqXL94Rza4' target='_blank')
+        button.featured-button Play
+
+    .movie-list-container
+      h1.movie-list-title UPCOMING
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=Pj0wz7zu3Ms' target='_blank')
+              img.movie-list-item-img(src='Red Notice.jpg' alt='')
+            p.movie-list-item-title Red Notice
+            br
+            .movie-wishlist
+              a(href='inputmovie0' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=-0bYWnP3jH4' target='_blank')
+              img.movie-list-item-img(src='Finch.jpg' alt='')
+            p.movie-list-item-title Finch
+            br
+            .movie-wishlist
+              a(href='inputmovie1' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=Q81Yf46Oj3s' target='_blank')
+              img.movie-list-item-img(src='Nightmare Alley.jpg' alt='')
+            p.movie-list-item-title Nightmare Alley
+            br
+            .movie-wishlist
+              a(href='inputmovie2' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=8g18jFHCLXk&t=3s' target='_blank')
+              img.movie-list-item-img(src='Dune.jpg' alt='')
+            p.movie-list-item-title Dune
+            br
+            .movie-wishlist
+              a(href='inputmovie3' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=ahZFCF--uRY' target='_blank')
+              img.movie-list-item-img(src='Ghostbusters.jpg' alt='')
+            p.movie-list-item-title Ghostbusters Afterlife
+            br
+            .movie-wishlist
+              a(href='inputmovie4' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=5zdBG-iGfes' target='_blank')
+              img.movie-list-item-img(src='The Kings Man.jpg' alt='')
+            p.movie-list-item-title The King&apos;s Man
+            br
+            .movie-wishlist
+              a(href='inputmovie5' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=CaimKeDcudo' target='_blank')
+              img.movie-list-item-img(src='Encanto.jpg' alt='')
+            p.movie-list-item-title Encanto
+            br
+            .movie-wishlist
+              a(href='inputmovie6' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+        i.fas.fa-chevron-right.arrow    
+    .movie-list-container-2
+      h1.movie-list-title TRENDING
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=Fp9pNPdNwjI&t=1s' target='_blank')
+              img.movie-list-item-img(src='Black Widow.jpg' alt='')
+            p.movie-list-item-title Black Widow
+            br
+            .movie-wishlist
+              a(href='inputmovie7' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=QPistcpGB8o' target='_blank')
+              img.movie-list-item-img(src='The Tomorrow War.png' alt='')
+            p.movie-list-item-title The Tomorrow War
+            br
+            .movie-wishlist
+              a(href='inputmovie8' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=odM92ap8_c0&t=2s' target='_blank')
+              img.movie-list-item-img(src='Godzilla.jpg' alt='')
+            p.movie-list-item-title Godzilla vs Kong Kong
+            br
+            .movie-wishlist
+              a(href='inputmovie9' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=NYH2sLid0Zc&t=1s' target='_blank')
+              img.movie-list-item-img(src='Mortal Kombat.jpg' alt='')
+            p.movie-list-item-title Mortal Kombat
+            br
+            .movie-wishlist
+              a(href='inputmovie10' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=8IqXgZd-P98&t=3s' target='_blank')
+              img.movie-list-item-img(src='Oxygen.jpg' alt='')
+            p.movie-list-item-title Oxygen
+            br
+            .movie-wishlist
+              a(href='inputmovie11' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=3cxixDgHUYw' target='_blank')
+              img.movie-list-item-img(src='Justice League.jpg' alt='')
+            p.movie-list-item-title Justice League
+            br
+            .movie-wishlist
+              a(href='inputmovie12' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=gmRKv7n2If8' target='_blank')
+              img.movie-list-item-img(src='Cruella.jpg' alt='')
+            p.movie-list-item-title Cruella
+            br
+            .movie-wishlist
+              a(href='inputmovie13' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+        i.fas.fa-chevron-right.arrow
+.container
+  .content-container
+    .featured-content-2(style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('Background.jpg');")
+        img.featured-title-2(src='Spirited Away.png' alt='Logo')
+        p.featured-desc-2
+          | In this animated feature by noted Japanese director Hayao Miyazaki, 10-year-old Chihiro (Rumi Hiiragi) and her parents (Takashi Nait&ocirc;, Yasuko Sawaguchi) stumble upon a seemingly abandoned amusement park. After her mother and father are turned into giant pigs, Chihiro meets the mysterious Haku (Miyu Irino), who explains that the park is a resort for supernatural beings who need a break from their time spent in the earthly realm, and that she must work there to free herself and her parents.
+        a(href='https://youtube.com/watch?v=ByXuk9QqQkk' target='_blank')
+          button.featured-button-2 Play
+    .movie-list-container-2
+      h1.movie-list-title DRAMA
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=S12-4mXCNj4' target='_blank')
+              img.movie-list-item-img(src='Vincenzo.png' alt='')
+            p.movie-list-item-title Vincenzo
+            br
+            .movie-wishlist
+              a(href='inputmovie14' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=oqxAJKy0ii4&t=21s' target='_blank')
+              img.movie-list-item-img(src='Squid Game.jpeg' alt='')
+            p.movie-list-item-title Squid Game
+            br
+            .movie-wishlist
+              a(href='inputmovie15' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=afW9W0FI5vc' target='_blank')
+              img.movie-list-item-img(src='Youth of May.jpg' alt='')
+            p.movie-list-item-title Youth of May
+            br
+            .movie-wishlist
+              a(href='inputmovie16' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=xJCTxUuu3js' target='_blank')
+              img.movie-list-item-img(src='Nevertheless.jpg' alt='')
+            p.movie-list-item-title Nevertheless
+            br
+            .movie-wishlist
+              a(href='inputmovie17' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=ZOl7iOrD31Q' target='_blank')
+              img.movie-list-item-img(src='My Name.jpg' alt='')
+            p.movie-list-item-title My Name
+            br
+            .movie-wishlist
+              a(href='inputmovie18' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=z66fazyp3-M' target='_blank')
+              img.movie-list-item-img(src='Hometown ChaChaCha.jpg' alt='')
+            p.movie-list-item-title Hometown Cha-Cha-Cha
+            br
+            .movie-wishlist
+              a(href='inputmovie19' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+          .movie-list-item
+            a(href='https://www.youtube.com/watch?v=JdqfCaiovI4' target='_blank')
+              img.movie-list-item-img(src='Doom at Your Service.jpg' alt='')
+            p.movie-list-item-title Doom at Your Service
+            br
+            .movie-wishlist
+              a(href='inputmovie20' style='text-decoration: none; color:white')
+                button.featured-button-3 Add to playlist&nbsp; 
+                  i.fas.fa-film
+        i.fas.fa-chevron-right.arrow
+        
+script(src='app.js')

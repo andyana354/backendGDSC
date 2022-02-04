@@ -1,0 +1,82 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='Website.css')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css')
+  style 
+    include ./wishlist.css
+  title Movieflix
+.navbar
+  .navbar-container
+    .logo-container
+      h1.logo Movieflix
+    .menu-container
+      ul.menu-list
+        a(href='/' style='text-decoration: none; color:white')
+          li.menu-list-item Home
+        a(href='logout' style='text-decoration: none; color:white')
+          li.menu-list-item Logout
+    .profile-container
+      img.profile-picture(src='Profile.jpg' alt='')
+      .profile-text-container
+        span.profile-text
+          = message
+        
+.container
+  .content-container
+    .featured-content(style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('image.jpg');")
+      h1.movie-list-title My Movie List
+    .movie-list-container
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            img.movie-list-item-img(src='Red Notice.jpg' alt='')
+            p.movie-list-item-title Red Notice
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Remove from playlist&nbsp; 
+                  i.fas.fa-film
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            img.movie-list-item-img(src='The Tomorrow War.png' alt='')
+            p.movie-list-item-title The Tomorrow War
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Remove from playlist&nbsp; 
+                  i.fas.fa-film
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            img.movie-list-item-img(src='Justice League.jpg' alt='')
+            p.movie-list-item-title Justice League
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Remove from playlist&nbsp; 
+                  i.fas.fa-film
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            img.movie-list-item-img(src='Vincenzo.png' alt='')
+            p.movie-list-item-title Vincenzo
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Remove from playlist&nbsp; 
+                  i.fas.fa-film
+      .movie-list-wrapper
+        .movie-list
+          .movie-list-item
+            img.movie-list-item-img(src='Mortal Kombat.jpg' alt='')
+            p.movie-list-item-title Mortal Kombat
+            br
+            .movie-wishlist
+              a(href='' style='text-decoration: none; color:white')
+                button.featured-button-3 Remove from playlist&nbsp; 
+                  i.fas.fa-film
+

@@ -1,0 +1,22 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Login
+  style 
+    include ./login.css
+body 
+  app.use(express.static('resources'))
+  img(src='image.jpg' , alt='some image') 
+.center
+  h1 Login
+  form(method='post')
+    .txt_field
+      input(type='text' name='username' required='')
+      label Username
+    .txt_field
+      input(type='password' name='password' required='')
+      label Password
+    input(type='submit' value='Login')
+    .signup_link
+      | Register? 
+      a(href='/register') Sign up
