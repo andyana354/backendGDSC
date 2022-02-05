@@ -1,4 +1,4 @@
-	$ gh repo clone irfanalmsyah/GDSC-backend
+	$ gh repo clone irfanalmsyah/backendGDSC
 	$ cd GDSC-backend
 	$ npm start
 	
