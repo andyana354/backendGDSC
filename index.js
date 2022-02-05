@@ -10,7 +10,7 @@ var logged = false;
 var user = NULL
 var isWrongPass = false;
 
-var movie0 = true;
+var movie0 = false;
 var movie1 = false;
 var movie2 = false;
 var movie3 = false;
@@ -105,137 +105,184 @@ app.post("/register", encoder, function(req, res){
 })
 
 app.get('/wishlist', function (req, res){
-    res.render('wishlist', {
-        title: "Wishlist Page", 
-        message: `Hello, ${user}!`,
-        movie0: movie0,
-        movie1: movie1,
-        movie2: movie2,
-        movie3: movie3,
-        movie4: movie4,
-        movie5: movie5,
-        movie6: movie6,
-        movie7: movie7,
-        movie8: movie8,
-        movie9: movie9,
-        movie10: movie10,
-        movie11: movie11,
-        movie12: movie12,
-        movie13: movie13,
-        movie14: movie14,
-        movie15: movie15,
-        movie16: movie16,
-        movie17: movie17,
-        movie18: movie18,
-        movie19: movie19,
-        movie20: movie20,
-    });
+    if (logged === false){
+        res.redirect("/login")
+    } else {
+        res.render('wishlist', {
+            title: "Wishlist Page", 
+            message: `Hello, ${user}!`,
+            movie0: movie0,
+            movie1: movie1,
+            movie2: movie2,
+            movie3: movie3,
+            movie4: movie4,
+            movie5: movie5,
+            movie6: movie6,
+            movie7: movie7,
+            movie8: movie8,
+            movie9: movie9,
+            movie10: movie10,
+            movie11: movie11,
+            movie12: movie12,
+            movie13: movie13,
+            movie14: movie14,
+            movie15: movie15,
+            movie16: movie16,
+            movie17: movie17,
+            movie18: movie18,
+            movie19: movie19,
+            movie20: movie20,
+        });
+    }
 });
 
 app.get('/gettingWishlist', function (req, res){
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '0'`, function (err, results){
         if (results.length > 0){
             movie0 = true
+        } else {
+            movie0 = false
         }
+
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '1'`, function (err, results){
         if (results.length > 0){
             movie1 = true
+        } else {
+            movie1 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '2'`, function (err, results){
         if (results.length > 0){
             movie2 = true
+        } else {
+            movie2 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '3'`, function (err, results){
         if (results.length > 0){
             movie3 = true
+        } else {
+            movie3 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '4'`, function (err, results){
         if (results.length > 0){
             movie4 = true
+        } else {
+            movie4 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '5'`, function (err, results){
         if (results.length > 0){
             movie5 = true
+        } else {
+            movie5 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '6'`, function (err, results){
         if (results.length > 0){
             movie6 = true
+        } else {
+            movie6 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '7'`, function (err, results){
         if (results.length > 0){
             movie7 = true
+        } else {
+            movie7 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '8'`, function (err, results){
         if (results.length > 0){
             movie8 = true
+        } else {
+            movie8 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '9'`, function (err, results){
         if (results.length > 0){
             movie9 = true
+        } else {
+            movie9 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '10'`, function (err, results){
         if (results.length > 0){
             movie10 = true
+        } else {
+            movie10 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '11'`, function (err, results){
         if (results.length > 0){
             movie11 = true
+        } else {
+            movie11 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '12'`, function (err, results){
         if (results.length > 0){
             movie12 = true
+        } else {
+            movie12 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '13'`, function (err, results){
         if (results.length > 0){
             movie13 = true
+        } else {
+            movie13 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '14'`, function (err, results){
         if (results.length > 0){
             movie14 = true
+        } else {
+            movie14 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '15'`, function (err, results){
         if (results.length > 0){
             movie15 = true
+        } else {
+            movie15 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '16'`, function (err, results){
         if (results.length > 0){
             movie16 = true
+        } else {
+            movie16 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '17'`, function (err, results){
         if (results.length > 0){
             movie17 = true
+        } else {
+            movie17 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '18'`, function (err, results){
         if (results.length > 0){
             movie18 = true
+        } else {
+            movie18 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '19'`, function (err, results){
         if (results.length > 0){
             movie19 = true
+        } else {
+            movie19 = false
         }
     })
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}' and movie_id = '20'`, function (err, results){
         if (results.length > 0){
             movie20 = true
+        } else {
+            movie20 = false
         }
     })
     res.redirect('/wishlist')
@@ -379,6 +426,131 @@ app.get("/inputmovie20", function (req, res){
     })
 })
 
+app.get("/removemovie0", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='0'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie1", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='1'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie2", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='2'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie3", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='3'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie4", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='4'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie5", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='5'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie6", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='6'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie7", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='7'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie8", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='8'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie9", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='9'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie10", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='10'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie11", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='11'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie12", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='12'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie13", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='13'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie14", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='14'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie15", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='15'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie16", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='16'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie17", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='17'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie18", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='18'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie19", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='19'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
+
+app.get("/removemovie20", function (req, res){
+    connection.query(`DELETE FROM wishlist where user_name='${user}' and movie_id='20'`, function (err, results) {
+        res.redirect("/gettingWishlist")
+    })
+})
 
 
 app.listen(process.env.PORT);
