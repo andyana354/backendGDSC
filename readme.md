@@ -10,7 +10,7 @@ creating table in mysql:
 
 	create table if not exists loginuser (
     	user_name varchar(255),
-    	user_pass varchar(255)
+    	user_pass varchar(255),
 		UNIQUE KEY `user_name` (`user_name`)
 	)
 
