@@ -14,14 +14,17 @@ head
       h1.logo Movieflix
     .menu-container
       ul.menu-list
-        a(href='gettingWishlist' style='text-decoration: none; color:white')
+        li.menu-list-item.active Home
+        a(href='wishlist' style='text-decoration: none; color:white')
           li.menu-list-item Wishlist
-        a(href='logout' style='text-decoration: none; color:white')
-          li.menu-list-item Logout
+        a(href='login' style='text-decoration: none; color:white')
+          li.menu-list-item Login
+        a(href='register' style='text-decoration: none; color:white')
+          li.menu-list-item Register
     .profile-container
+      img.profile-picture(src='Profile.jpg' alt='')
       .profile-text-container
-        span.profile-text
-          = message
+        span.profile-text User
 .container
   .content-container
     .featured-content(style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('Money\ Heist.jpg');")
@@ -36,66 +39,66 @@ head
       .movie-list-wrapper
         .movie-list
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=Pj0wz7zu3Ms' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Red Notice.jpg' alt='')
             p.movie-list-item-title Red Notice
             br
             .movie-wishlist
               a(href='inputmovie0' style='text-decoration: none; color:white')
-                button.featured-button-3 Add to playlist&nbsp; 
+                button.featured-button-3 Add to playlist&nbsp;
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=-0bYWnP3jH4' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Finch.jpg' alt='')
             p.movie-list-item-title Finch
             br
             .movie-wishlist
-              a(href='inputmovie1' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=Q81Yf46Oj3s' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Nightmare Alley.jpg' alt='')
             p.movie-list-item-title Nightmare Alley
             br
             .movie-wishlist
-              a(href='inputmovie2' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=8g18jFHCLXk&t=3s' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Dune.jpg' alt='')
             p.movie-list-item-title Dune
             br
             .movie-wishlist
-              a(href='inputmovie3' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=ahZFCF--uRY' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Ghostbusters.jpg' alt='')
             p.movie-list-item-title Ghostbusters Afterlife
             br
             .movie-wishlist
-              a(href='inputmovie4' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=5zdBG-iGfes' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='The Kings Man.jpg' alt='')
             p.movie-list-item-title The King&apos;s Man
             br
             .movie-wishlist
-              a(href='inputmovie5' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=CaimKeDcudo' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Encanto.jpg' alt='')
             p.movie-list-item-title Encanto
             br
             .movie-wishlist
-              a(href='inputmovie6' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
         i.fas.fa-chevron-right.arrow    
@@ -104,66 +107,66 @@ head
       .movie-list-wrapper
         .movie-list
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=Fp9pNPdNwjI&t=1s' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Black Widow.jpg' alt='')
             p.movie-list-item-title Black Widow
             br
             .movie-wishlist
-              a(href='inputmovie7' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=QPistcpGB8o' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='The Tomorrow War.png' alt='')
             p.movie-list-item-title The Tomorrow War
             br
             .movie-wishlist
-              a(href='inputmovie8' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=odM92ap8_c0&t=2s' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Godzilla.jpg' alt='')
             p.movie-list-item-title Godzilla vs Kong Kong
             br
             .movie-wishlist
-              a(href='inputmovie9' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=NYH2sLid0Zc&t=1s' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Mortal Kombat.jpg' alt='')
             p.movie-list-item-title Mortal Kombat
             br
             .movie-wishlist
-              a(href='inputmovie10' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=8IqXgZd-P98&t=3s' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Oxygen.jpg' alt='')
             p.movie-list-item-title Oxygen
             br
             .movie-wishlist
-              a(href='inputmovie11' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=3cxixDgHUYw' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Justice League.jpg' alt='')
             p.movie-list-item-title Justice League
             br
             .movie-wishlist
-              a(href='inputmovie12' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=gmRKv7n2If8' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Cruella.jpg' alt='')
             p.movie-list-item-title Cruella
             br
             .movie-wishlist
-              a(href='inputmovie13' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
         i.fas.fa-chevron-right.arrow
@@ -180,66 +183,66 @@ head
       .movie-list-wrapper
         .movie-list
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=S12-4mXCNj4' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Vincenzo.png' alt='')
             p.movie-list-item-title Vincenzo
             br
             .movie-wishlist
-              a(href='inputmovie14' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=oqxAJKy0ii4&t=21s' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Squid Game.jpeg' alt='')
             p.movie-list-item-title Squid Game
             br
             .movie-wishlist
-              a(href='inputmovie15' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=afW9W0FI5vc' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Youth of May.jpg' alt='')
             p.movie-list-item-title Youth of May
             br
             .movie-wishlist
-              a(href='inputmovie16' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=xJCTxUuu3js' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Nevertheless.jpg' alt='')
             p.movie-list-item-title Nevertheless
             br
             .movie-wishlist
-              a(href='inputmovie17' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=ZOl7iOrD31Q' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='My Name.jpg' alt='')
             p.movie-list-item-title My Name
             br
             .movie-wishlist
-              a(href='inputmovie18' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=z66fazyp3-M' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Hometown ChaChaCha.jpg' alt='')
             p.movie-list-item-title Hometown Cha-Cha-Cha
             br
             .movie-wishlist
-              a(href='inputmovie19' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
           .movie-list-item
-            a(href='https://www.youtube.com/watch?v=JdqfCaiovI4' target='_blank')
+            a(href='' target='_blank')
               img.movie-list-item-img(src='Doom at Your Service.jpg' alt='')
             p.movie-list-item-title Doom at Your Service
             br
             .movie-wishlist
-              a(href='inputmovie20' style='text-decoration: none; color:white')
+              a(href='' style='text-decoration: none; color:white')
                 button.featured-button-3 Add to playlist&nbsp; 
                   i.fas.fa-film
         i.fas.fa-chevron-right.arrow

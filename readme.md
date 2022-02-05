@@ -1,7 +1,6 @@
-	$ gh repo clone irfanalmsyah/backendGDSC
-	$ cd backendGDSC
-	$ node app.js
-	http://localhost:8081/
+	$ gh repo clone irfanalmsyah/GDSC-backend
+	$ cd GDSC-backend
+	$ npm start
 	
 Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
 `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';`
@@ -9,22 +8,24 @@ Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protoc
 
 creating table in mysql:
 
-	create table if not exists tes (
-		user_id int not null primary key auto_increment,
-    		user_name varchar(255),
-    		user_pass varchar(255)
+	create table if not exists loginuser (
+    	user_name varchar(255),
+    	user_pass varchar(255)
+		UNIQUE KEY `user_name` (`user_name`)
 	)
+
+	create table if not exists wishlist (
+    	user_name varchar(255),
+    	movie_id varchar(255),
+		UNIQUE (user_name, movie_id)
+	)
+
 
 # To Do List
 - [ ] frontend
-	 - [ ] index.pug (include movie list, wishlist button, add to wishlist button, log out button)
-	 - [ ] login.pug (include login form, register button)
-	 - [ ] login2.pug (include login form, register button, wrong username/pass alert)
-	 - [ ] register.pug (include register form, login button)
-	 - [ ] wishlist.pug (include wishes)
+	 - [ ] wishlist.pug
  
  - [ ] backend
-	 - [ ] login system
-	 - [ ] register system
 	 - [ ] wishlist system
+  
  - [ ] heroku deploy
