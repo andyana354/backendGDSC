@@ -35,10 +35,10 @@ var movie20 = false;
 app.set('view engine', 'pug')
 app.use(express.static('public'));
 const connection = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE
+    host: 'sql6.freemysqlhosting.net',
+    user: 'sql6470558',
+    password: '4BAVtTYJsS',
+    database: 'sql6470558'
 });
 
 connection.connect(function(error){
