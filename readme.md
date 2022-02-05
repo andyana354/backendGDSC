@@ -1,5 +1,5 @@
 	$ gh repo clone irfanalmsyah/backendGDSC
-	$ cd GDSC-backend
+	$ cd backendGDSC
 	$ npm start
 	
 Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
