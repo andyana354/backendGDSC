@@ -288,7 +288,7 @@ app.get('/gettingWishlist', function (req, res){
     res.redirect('/wishlist')
 })
 
-app.get("/wishlistapi", function (req, res){
+app.get("/api/wishlist", function (req, res){
     
     connection.query(`SELECT movie_id FROM wishlist where user_name = '${user}'`, function (err, results) {
         res.send(results)
