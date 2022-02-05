@@ -12,7 +12,7 @@ creating table in mysql:
     	user_name varchar(255),
     	user_pass varchar(255),
 		UNIQUE KEY `user_name` (`user_name`)
-	)
+	);
 
 	create table if not exists wishlist (
     	user_name varchar(255),
